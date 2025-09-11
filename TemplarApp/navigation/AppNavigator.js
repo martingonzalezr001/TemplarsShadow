@@ -5,15 +5,16 @@ import CrearPersonajeScreen from "../screens/CrearPersonajeScreen";
 import AvCooperativasScreen from "../screens/AvCooperativasScreen";
 import DiseñarMazmorraScreen from '../screens/DiseñarMazmorraScreen'
 import DadosVirtualesScreen from '../screens/DadosVirtualesScreen';
+import BibliotecaNavigator from "./BibliotecaNavigator";
 
 
 const Stack = createStackNavigator();
 
 export default function AppNavigator(){
     return(
-        <Stack.Navigator>
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
             <Stack.Screen name="Home" component={HomeScreen}/>
-            <Stack.Screen name="Biblioteca" component={BibliotecaScreen}/>
+            <Stack.Screen name="Biblioteca" component={BibliotecaNavigator}/>
             <Stack.Screen name="Crear Personaje" component={CrearPersonajeScreen}/>
             <Stack.Screen name="Aventuras Cooperativas" component={AvCooperativasScreen}/>
             <Stack.Screen name="Diseñar Mazmorra" component={DiseñarMazmorraScreen} />
